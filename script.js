@@ -38,6 +38,11 @@ navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
 
+// Close nav when clicking outside
+document.addEventListener('click', (e) => {
+  if (!navbar.contains(e.target)) navLinks.classList.remove('open');
+});
+
 // Navbar shrink on scroll
 const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
