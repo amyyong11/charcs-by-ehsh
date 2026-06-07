@@ -41,10 +41,11 @@ navLinks.querySelectorAll('a').forEach(link => {
 // Navbar shrink on scroll
 const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
+  const hPad = window.innerWidth <= 900 ? '16px' : '48px';
   if (window.scrollY > 40) {
-    navbar.style.padding = '8px 48px';
+    navbar.style.padding = `8px ${hPad}`;
   } else {
-    navbar.style.padding = '12px 48px';
+    navbar.style.padding = `12px ${hPad}`;
   }
 });
 
